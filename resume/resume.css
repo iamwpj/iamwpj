@@ -1,0 +1,85 @@
+/* global */
+
+body {
+    margin-left: 5%;
+    margin-top: 5%;
+    max-width: 1000px;
+}
+
+body.dark-mode {
+    background-color: black;
+    color: seashell;
+}
+
+hr {
+    border-top: 1px solid #bbb;
+    margin-right: 85%;
+}
+
+
+/* contact */
+
+#contact {
+    /* margin-right: 5%; */
+    margin: auto;
+}
+
+#contact h1 {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 2vh;
+}
+
+#contact h2 {
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 1.5vh;
+}
+
+#contact hr {
+    border-top: 1px solid #bbb;
+    width: 15%;
+    margin: auto;
+}
+
+
+/* sections */
+
+#sections h1 {
+    font-family: sans-serif;
+    font-size: 2vh;
+}
+
+#sections h2 {
+    font-size: 1.75vh;
+    margin-left: 7.5%;
+}
+
+#sections h3 {
+    font-size: 1.5vh;
+    font-style: italic;
+    font-weight: bolder;
+    margin-left: 7.5%;
+    line-height: 60%;
+}
+
+#sections p {
+    font-family: monospace;
+    font-size: 1.25vh;
+    margin-left: 10%;
+    margin-right: 25%;
+}
+
+#sections ul {
+    font-size: 1.5vh;
+    margin-left: 12.5%;
+    margin-right: 25%;
+}
+
+#dark-button {
+    float: right;
+    color: #777;
+    font-size: 16px;
+    font-family: monospace;
+    margin: 5px;
+}
