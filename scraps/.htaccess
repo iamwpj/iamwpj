@@ -1,0 +1,3 @@
+Options +Indexes
+IndexOptions +SuppressSize +HTMLTable +ScanHTMLTitles
+IndexIgnore *.css
