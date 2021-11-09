@@ -6,13 +6,13 @@ from the resume source,
 '
 
 # .txt
-pandoc -t plain -s resume.html -o resume.txt
+pandoc -t plain -s ../resume.html -o resume.txt
 
 # .md
-pandoc -t markdown_strict -s resume.html -o resume.md
+pandoc -t markdown_strict -s ../resume.html -o resume.md
 
 # .pdf, lots of corrections
-pandoc -t html5 resume.html -o resume.pdf \
+pandoc -t html5 ../resume.html -o resume.pdf \
     --css=resume.css \
     -V title:"" \
     -V margin-top=10 \
