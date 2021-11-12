@@ -13,7 +13,6 @@ Ex.
     Use:  $(basename $0) a-post
 "
 post=$1
-title="${@:2}"
 
 if [ -z $post ]; then
     echo -e "$usage"
@@ -28,8 +27,9 @@ else
 fi
 
 # Modify the index.html
-
-if [ $(grep -cw "$1.html" ../index.html) -lt 1 ]; then
+post_date=$(sed -n -e 's/^date: //p' $post.md | sed 's/"//g')
+post_title=$(sed -n -e 's/^title: //p' $post.md | sed 's/"//g')
+if [ $(grep -cw "$post.html" ../index.html) -lt 1 ]; then
     # https://unix.stackexchange.com/questions/52131/sed-on-osx-insert-at-a-certain-line/
-    sed -i.bak -e '/<ul class\=toc>/a\'$'\n'"$(printf '\t\t')<li><a href=$post.html>$title</a></li>" ../index.html
+    sed -i.bak '/<ul class\=toc>/a\'$'\n'"$(printf '\t\t')<li><a href=$post.html>$(echo "$post_title - $post_date")</a></li>" ../index.html
 fi
