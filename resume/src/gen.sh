@@ -6,10 +6,10 @@ from the resume source,
 '
 
 # .txt
-pandoc -t plain -s ../resume.html -o resume.txt
+pandoc -t plain -f html -o resume.txt <(sed '/<nav>/,/<\/nav>/d' ../resume.html)
 
 # .md
-pandoc -t markdown_strict -s ../resume.html -o resume.md
+pandoc -t markdown_strict -f html -o resume.md <(sed '/<nav>/,/<\/nav>/d' ../resume.html)
 
 # .pdf, lots of corrections
 # Strip <nav> block

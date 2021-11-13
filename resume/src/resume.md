@@ -1,7 +1,3 @@
-Download PDF
-
-Go to Repo
-
 # Wesley Jones
 
 ## Cedar Falls, IA - <wes@iamwpj.com>
