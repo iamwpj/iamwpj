@@ -1,3 +1,23 @@
+/* nav */
+
+nav {
+    float: left;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+}
+
+button {
+    float: right;
+    color: #777;
+    font-size: 1.25vh;
+    font-family: monospace;
+    margin: 5px;
+}
+
+
 /* global */
 
 body {
@@ -74,12 +94,4 @@ hr {
     font-size: 1.5vh;
     margin-left: 12.5%;
     margin-right: 25%;
-}
-
-#dark-button {
-    float: right;
-    color: #777;
-    font-size: 16px;
-    font-family: monospace;
-    margin: 5px;
 }
