@@ -5,8 +5,9 @@ nav {
     text-align: right;
     float: right;
     line-height: 1;
-    width: 100% 
+    width: 100%
 }
+
 body {
     margin: 40px auto;
     max-width: 650px;
@@ -14,13 +15,21 @@ body {
     font-size: 18px;
     color: #444;
     padding: 0 10px;
-    background-color:#F5F5F5;
+    background-color: #f3f3f3;
 }
 
 body.dark-mode {
-    background-color: black;
+    background-color: #2e2e2e;
     color: seashell;
-  }  
+}
+
+a:link {
+    color: darkcyan
+}
+
+a:visited {
+    color: darkcyan;
+}
 
 h1,
 h2,
@@ -41,7 +50,7 @@ blockquote {
 body.dark-mode blockquote {
     background-color: dimgray;
     color: seashell;
-}  
+}
 
 code {
     white-space: pre;
