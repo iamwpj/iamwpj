@@ -8,11 +8,8 @@ nav {
     width: 100%
 }
 
-img {
-    width: 100%
-}
-
-body {
+img,
+body:not(pre):not(code) {
     margin: 40px auto;
     max-width: 650px;
     line-height: 1.6;

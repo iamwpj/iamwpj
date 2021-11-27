@@ -21,7 +21,7 @@ else
         -s "$post".md \
         -o ../"$post".html \
         --from=markdown+yaml_metadata_block \
-        --standalone\
+        --standalone \
         --template template.html \
         --css src/template.css
 fi
