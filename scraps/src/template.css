@@ -52,9 +52,13 @@ body.dark-mode blockquote {
     color: seashell;
 }
 
-code {
-    white-space: pre;
-}
+
+/* pre code {
+    color: seashell;
+    background-color: dimgray;
+    display: block;
+    padding: 20px;
+} */
 
 #home-button {
     float: right;

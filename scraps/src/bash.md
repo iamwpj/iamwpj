@@ -12,7 +12,7 @@ All code can be (should be...) pretty! It has done enough work to be worth it. T
 
 ### 1. Add title block
 
-```(bash)
+```bash
 : << 'NOTES'
 Use this script to look cool.
 
@@ -40,11 +40,11 @@ If you only do one thing from this list -- do this. Nothing else really matters.
 
 The process is easy enough, if you rely on a tool like Visual Studio Code you can install the plugin to get syntax highlighting showing potential issues:
 
-![Example of ShellCheck integration in Visual Studio Code.](_media/bash1.png)
+![Example of ShellCheck integration in Visual Studio Code.](scraps/src/_media/bash1.png)
 
 If you use `vi` or edit remotely you can install ShellCheck from your favorite repository and get similar output -- maybe even more useful:
 
-![Example of ShellCheck output in terminal.](_media/bash2.png)
+![Example of ShellCheck output in terminal.](scraps/src/_media/bash2.png)
 
 *Get more information for ShellCheck here: <https://www.shellcheck.net>*
 
@@ -52,7 +52,7 @@ If you use `vi` or edit remotely you can install ShellCheck from your favorite r
 
 I always used to say that if you're using arrays in BASH you should switch to another language that is better for data processing. Learning about sub-shells outputting to arrays changed this notion. I still recommend reaching for Python or the likes for data processing, but don't be so quick to dismiss the opportunities of using BASH arrays.
 
-```(bash)
+```bash
 arr=( 3 5 7 )
 for n in ${arr[*]}; do
     echo "file-$n.txt"
@@ -61,7 +61,7 @@ done
 
 It's hard to see in real life so here is a better example.
 
-```(bash)
+```bash
 arr=( "$(find ~/Desktop/test -type f -name "*.xml")" )
 
 for file in ${arr[*]}; do

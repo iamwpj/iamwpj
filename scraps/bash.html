@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="src/template.css"  />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠</text></svg>"> 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 </head>
 
 <div>
@@ -27,19 +29,19 @@
     <h2 id="bash-but-pretty">BASH, but pretty</h2>
 <p>All code can be (should be…) pretty! It has done enough work to be worth it. There are no standards like Python’s PEP here, but here’s what I do. I don’t see any reason it can’t be good looking.</p>
 <h3 id="add-title-block">1. Add title block</h3>
-<pre class="(bash)"><code>: &lt;&lt; &#39;NOTES&#39;
-Use this script to look cool.
-
-Title: A Script
-Author: Wes Jones
-Date: 11/2021
-Contact: wes@iamwpj.com
-
-References:
-    - http://tldp.org
-NOTES
-...
-echo &quot;Start your script here\!&quot;</code></pre>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">:</span> <span class="op">&lt;&lt; &#39;NOTES&#39;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="st">Use this script to look cool.</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="st">Title: A Script</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="st">Author: Wes Jones</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="st">Date: 11/2021</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="st">Contact: wes@iamwpj.com</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="st">References:</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="st">    - http://tldp.org</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">NOTES</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="ex">...</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="bu">echo</span> <span class="st">&quot;Start your script here\!&quot;</span></span></code></pre></div>
 <p>This offers a simple block that is similar to other languages. I find that the header block allows me to easily include links for <code>references</code> that contain links to guides or manuals.</p>
 <p><strong>How does it work?</strong></p>
 <p><a href="https://tldp.org/LDP/abs/html/special-chars.html">The colon is a <em>null operator</em></a>, which accepts data from the <code>&lt;&lt;</code> – essentially piping the <a href="https://tldp.org/LDP/abs/html/here-docs.html"><code>heredoc</code></a>. It’s a cool trick that I found while reading about redirecting a <code>heredoc</code>.</p>
@@ -47,25 +49,25 @@ echo &quot;Start your script here\!&quot;</code></pre>
 <p>If you only do one thing from this list – do this. Nothing else really matters. I should have made this the first point! Shellcheck catches all those anti-patterns that you’ve just dealt with over the years. It’s as close as you can get to a language standard.</p>
 <p>The process is easy enough, if you rely on a tool like Visual Studio Code you can install the plugin to get syntax highlighting showing potential issues:</p>
 <figure>
-<img src="_media/bash1.png" alt="Example of ShellCheck integration in Visual Studio Code." /><figcaption aria-hidden="true">Example of ShellCheck integration in Visual Studio Code.</figcaption>
+<img src="scraps/src/_media/bash1.png" alt="Example of ShellCheck integration in Visual Studio Code." /><figcaption aria-hidden="true">Example of ShellCheck integration in Visual Studio Code.</figcaption>
 </figure>
 <p>If you use <code>vi</code> or edit remotely you can install ShellCheck from your favorite repository and get similar output – maybe even more useful:</p>
 <figure>
-<img src="_media/bash2.png" alt="Example of ShellCheck output in terminal." /><figcaption aria-hidden="true">Example of ShellCheck output in terminal.</figcaption>
+<img src="scraps/src/_media/bash2.png" alt="Example of ShellCheck output in terminal." /><figcaption aria-hidden="true">Example of ShellCheck output in terminal.</figcaption>
 </figure>
 <p><em>Get more information for ShellCheck here: <a href="https://www.shellcheck.net" class="uri">https://www.shellcheck.net</a></em></p>
 <h3 id="use-arrays-more">3. Use arrays more</h3>
 <p>I always used to say that if you’re using arrays in BASH you should switch to another language that is better for data processing. Learning about sub-shells outputting to arrays changed this notion. I still recommend reaching for Python or the likes for data processing, but don’t be so quick to dismiss the opportunities of using BASH arrays.</p>
-<pre class="(bash)"><code>arr=( 3 5 7 )
-for n in ${arr[*]}; do
-    echo &quot;file-$n.txt&quot;
-done</code></pre>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="va">arr</span><span class="op">=</span><span class="va">(</span> 3 5 7 <span class="va">)</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="va">${arr</span><span class="op">[*]</span><span class="va">}</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="st">&quot;file-</span><span class="va">$n</span><span class="st">.txt&quot;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div>
 <p>It’s hard to see in real life so here is a better example.</p>
-<pre class="(bash)"><code>arr=( &quot;$(find ~/Desktop/test -type f -name &quot;*.xml&quot;)&quot; )
-
-for file in ${arr[*]}; do
-    mv &quot;$file&quot; /data/xmls/
-done</code></pre>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="va">arr</span><span class="op">=</span><span class="va">(</span> <span class="st">&quot;</span><span class="va">$(</span><span class="fu">find</span> ~/Desktop/test <span class="at">-type</span> f <span class="at">-name</span> <span class="st">&quot;*.xml&quot;</span><span class="va">)</span><span class="st">&quot;</span> <span class="va">)</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> file <span class="kw">in</span> <span class="va">${arr</span><span class="op">[*]</span><span class="va">}</span><span class="kw">;</span> <span class="cf">do</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mv</span> <span class="st">&quot;</span><span class="va">$file</span><span class="st">&quot;</span> /data/xmls/</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">done</span></span></code></pre></div>
 <p>One of the most useful things I find is directly handling a sub-command directly into an array. Obviously there are many options here (<code>$(ls ~/Desktop/test/*.xml)</code>) – it comes down to the data splitting. It’s easy to take advantage of the organized data at this point.</p>
 <p><em>Read more here: <a href="https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html" class="uri">https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_10_02.html</a></em></p>
 <h3 id="quick-list">Quick list</h3>
