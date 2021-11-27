@@ -40,11 +40,11 @@ If you only do one thing from this list -- do this. Nothing else really matters.
 
 The process is easy enough, if you rely on a tool like Visual Studio Code you can install the plugin to get syntax highlighting showing potential issues:
 
-![Example of ShellCheck integration in Visual Studio Code.](scraps/src/_media/bash1.png)
+![Example of ShellCheck integration in Visual Studio Code.](https://github.com/iamwpj/iamwpj/blob/main/scraps/src/_media/bash1.png?raw=true)
 
 If you use `vi` or edit remotely you can install ShellCheck from your favorite repository and get similar output -- maybe even more useful:
 
-![Example of ShellCheck output in terminal.](scraps/src/_media/bash2.png)
+![Example of ShellCheck output in terminal.](https://github.com/iamwpj/iamwpj/blob/main/scraps/src/_media/bash2.png?raw=true)
 
 *Get more information for ShellCheck here: <https://www.shellcheck.net>*
 

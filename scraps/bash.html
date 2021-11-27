@@ -8,9 +8,12 @@
     <meta name="generator" content="pandoc" />     <meta name="author" content="Wes Jones" />      <meta name="date" content="2021-11-27" />     <title>Pretty BASH</title>
     <link rel="stylesheet" href="src/template.css"  />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠</text></svg>"> 
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠</text></svg>">
+    <link rel="stylesheet" href="/path/to/styles/default.css">
+    <script src="/path/to/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
 </head>
 
 <div>
@@ -49,11 +52,11 @@
 <p>If you only do one thing from this list – do this. Nothing else really matters. I should have made this the first point! Shellcheck catches all those anti-patterns that you’ve just dealt with over the years. It’s as close as you can get to a language standard.</p>
 <p>The process is easy enough, if you rely on a tool like Visual Studio Code you can install the plugin to get syntax highlighting showing potential issues:</p>
 <figure>
-<img src="scraps/src/_media/bash1.png" alt="Example of ShellCheck integration in Visual Studio Code." /><figcaption aria-hidden="true">Example of ShellCheck integration in Visual Studio Code.</figcaption>
+<img src="https://github.com/iamwpj/iamwpj/blob/main/scraps/src/_media/bash1.png?raw=true" alt="Example of ShellCheck integration in Visual Studio Code." /><figcaption aria-hidden="true">Example of ShellCheck integration in Visual Studio Code.</figcaption>
 </figure>
 <p>If you use <code>vi</code> or edit remotely you can install ShellCheck from your favorite repository and get similar output – maybe even more useful:</p>
 <figure>
-<img src="scraps/src/_media/bash2.png" alt="Example of ShellCheck output in terminal." /><figcaption aria-hidden="true">Example of ShellCheck output in terminal.</figcaption>
+<img src="https://github.com/iamwpj/iamwpj/blob/main/scraps/src/_media/bash2.png?raw=true" alt="Example of ShellCheck output in terminal." /><figcaption aria-hidden="true">Example of ShellCheck output in terminal.</figcaption>
 </figure>
 <p><em>Get more information for ShellCheck here: <a href="https://www.shellcheck.net" class="uri">https://www.shellcheck.net</a></em></p>
 <h3 id="use-arrays-more">3. Use arrays more</h3>
