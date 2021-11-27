@@ -1,9 +1,9 @@
 #! /usr/bin/env bash
-: '
+: << 'NOTES'
 Generate subsidiary files
 from the resume source,
 `resume.html`
-'
+NOTES
 
 # .txt
 pandoc -t plain -f html -o resume.txt <(sed '/<nav>/,/<\/nav>/d' ../resume.html)

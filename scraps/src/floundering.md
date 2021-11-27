@@ -6,16 +6,16 @@ author: Wes Jones
 date: "14 November 2021"
 ---
 
-# Annotations of Zillow's Fishy-ness
+## Annotations of Zillow's Fishy-ness
 
-## Disclaimers & Pro-claimers
+### Disclaimers & Pro-claimers
 
 This isn't a research article. Please don't use this as evidence. Read this if you're too lazy to read the longer articles and you just want to know some basics.
 
 I'm not an expert in the following:
 
 * Home buying or real estate
-*  Investment
+* Investment
 * "Flipping"
 
 I do know about:
@@ -23,7 +23,7 @@ I do know about:
 * Silicon Valley decisions can be much stupider than we give them credit for.
 * No one learned anything in 2008
 
-## What is going on here?
+### What is going on here?
 
 **iBuyers**: A term invented in 2017 to alleviate press and media from having to say "Instant Buyer". I will refrain from using it in my own writing. Expect it only in quoted text.<sup>[1][1]</sup>
 
@@ -33,7 +33,7 @@ Zillow got into hot water in October 2021 when they had over invested in a house
 
 The assumption used is that a gap for consumers is open: buy a house quickly so people can get out and move into a new house with their money. Ideally a homeowner would take a small hit, perhaps a few percentage points on the total value of the home in lieu of having money in hand. It was expected that Zillow's presence in the home data field would give existing competitors a run for their money.
 
-## Does it work?
+### Does it work?
 
 There are constraints on the profitability of this system. It's easy to see that simply buying and selling a home at face value isn't reliable. You could easily spend 2-3% of the sale price to get a return of over 5% though -- a flipping market has proved this. It seems to work:<sup>[3][3]</sup>
 
@@ -45,7 +45,7 @@ While this seems to be a good indicator for inserting a middleman into America's
 
 So, no -- doesn't seem to *actually* work. To me this situation smacks of Uber the ilk. Venture capitalists jump at a hot new technology that is a **whole new paradigm**. I'm liable to be wrong -- very wrong -- about this, but I would hazard a guess that turning a profit in a long run house buying gambit is a bit of a doozy. Distilling home buying into an algorithm that performs reliable despite commonly fluctuating variables is an assumption that could only come from the hubris of Silicon Valley VCs.
 
-## References
+### References
 
 1. <https://en.wikipedia.org/wiki/Instant_buyer>
 2. <https://papers.ssrn.com/sol3/papers.cfm>

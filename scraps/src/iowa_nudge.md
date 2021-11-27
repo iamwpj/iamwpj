@@ -6,13 +6,13 @@ author: Wes Jones
 date: "28 October 2021"
 ---
 
-# Iowa Nudge
+## Iowa Nudge
 
 Politically, America is functioning as intended. As expected, extremes of our two party system are unhappy, but the perceptions from news and social media are playing tricks on our reality -- things are mostly fine. I recognize my privilege in saying that, my only defense is that things aren't getting *worse* (even for those less privileged). That's been a pretty standard set up as far as America's democracy has been concerned.
 
 We want a little bit of betterment though. At home, in Iowa, our ways are changing. The state is more conservative than we're used to and the balance feels off -- in a "long-run" sort of way. The political leaning doesn't *have* to affect economics of locals, but it can. What are some non-political improvement projects that Iowa could take without having to address changes in voter attitudes? If an elected official is going to vote yes on a plan then it better not have negative consequences...so what do we do?
 
-## Ideas
+### Ideas
 
 > We'll start with a basic (and false!) assumption -- the state or federal politicians WANT to spend money in Iowa.
 
@@ -34,7 +34,7 @@ We want a little bit of betterment though. At home, in Iowa, our ways are changi
 
 6. Offer grants for community centers to be built. Allow these projects to be controlled by churches or nonprofits in the community that the center is to be built. These centers are for hosting meetings and will contain lounge space with heat and A/C for inclement months.
 
-## Conclusion
+### Conclusion
 
 Each one of these suggestions offers plenty of wiggle room to allow for general corruption and misdeed. There should be opportunities for conflicts of interest between construction contracts, procurement, or even just violating the separation of church and state. Typically I'm not a fan of this behavior, but of course I prefer that our state work to improve itself rather than just languish. I think taxpayers have long anticipated such skimming and won't object to it in the ballot box.
 
