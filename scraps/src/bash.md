@@ -1,7 +1,7 @@
 ---
 title: Pretty BASH
 subtitle: |
-    Not you're ugly cron job scripts.
+    Not your ugly cron job scripts.
 author: Wes Jones
 date: "27 November 2021"
 ---
