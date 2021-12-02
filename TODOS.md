@@ -1,3 +1,5 @@
 # To Do's
 
-- [ ] Collect `prefers-color-scheme` for HTML/CSS.
+- [x] Collect `prefers-color-scheme` for HTML/CSS.
+- [ ] Set up `best_of_stack`
+- [ ] Recipes?

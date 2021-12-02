@@ -15,7 +15,7 @@
 </head>
 
 <div>
-    <button id='home-button' onclick="location.href='https://iamwpj.com/scraps'"> 🏡 HOME </button>
+    <button id='home-button' onclick="location.href='https://iamwpj.com/scraps'"> 🗃 INDEX </button>
     <button id='dark-button' onclick="darkMode()"> 🌓  </button>
     <br>
 </div>
@@ -37,6 +37,10 @@
 
 <script>
     function darkMode() {
+        document.body.classList.toggle("dark-mode");
+        document.body.blockquote.classList.toggle("bq-dark-mode");
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
         document.body.classList.toggle("dark-mode");
         document.body.blockquote.classList.toggle("bq-dark-mode");
     }

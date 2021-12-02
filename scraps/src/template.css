@@ -8,6 +8,17 @@ nav {
     width: 100%
 }
 
+@media (prefers-color-scheme: dark) {
+    body.dark-mode {
+        background-color: #2e2e2e;
+        color: seashell;
+    }
+    body.dark-mode blockquote {
+        background-color: dimgray;
+        color: seashell;
+    }
+}
+
 body {
     margin: 40px auto;
     max-width: 650px;
@@ -18,14 +29,14 @@ body {
     background-color: #f3f3f3;
 }
 
-img {
-    width: 100%;
-    object-fit: contain;
-}
-
-body.dark-mode {
-    background-color: #2e2e2e;
-    color: seashell;
+blockquote {
+    background: #DEDEDE;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    color: black;
+    font-family: sans-serif;
 }
 
 a:link {
@@ -42,19 +53,9 @@ h3 {
     line-height: 1.2
 }
 
-blockquote {
-    background: #DEDEDE;
-    border-left: 10px solid #ccc;
-    margin: 1.5em 10px;
-    padding: 0.5em 10px;
-    quotes: "\201C""\201D""\2018""\2019";
-    color: black;
-    font-family: sans-serif;
-}
-
-body.dark-mode blockquote {
-    background-color: dimgray;
-    color: seashell;
+img {
+    width: 100%;
+    object-fit: contain;
 }
 
 pre code {
