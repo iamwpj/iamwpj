@@ -6,6 +6,9 @@ author: Wes Jones
 date: "14 November 2021"
 ---
 
+**UPDATE 11/27/2021**:
+Steven Buccini nails it with a much better review of Zillow's ignorance. I highly recommend perusing his blog. <https://www.stevenbuccini.com/zillow-offers>
+
 ## Annotations of Zillow's Fishy-ness
 
 ### Disclaimers & Pro-claimers

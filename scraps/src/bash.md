@@ -80,3 +80,4 @@ A few last thoughts. All of these could be their own post or in some cases multi
 * Use shell expansions more: <https://ss64.com/bash/syntax-expand.html>
 * Split your script into functions: <https://linuxize.com/post/bash-functions>
 * Shell parameter expansions: <https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html>
+* Google's Guide on Shell Scripts: <https://google.github.io/styleguide/shellguide.html>

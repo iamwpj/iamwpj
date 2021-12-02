@@ -23,7 +23,8 @@ else
         --from=markdown+yaml_metadata_block \
         --standalone \
         --template template.html \
-        --css src/template.css
+        --to=markdown-fenced_code_attributes \
+        --css src/template.css      
 fi
 
 # Modify the index.html
