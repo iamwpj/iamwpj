@@ -23,7 +23,6 @@ else
         --from=markdown+yaml_metadata_block \
         --standalone \
         --template template.html \
-        --to=markdown-fenced_code_attributes \
         --css src/template.css      
 fi
 
