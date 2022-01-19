@@ -23,6 +23,7 @@ button {
 body {
     margin-left: 5%;
     margin-top: 5%;
+    margin-bottom: 10%;
     max-width: 1000px;
 }
 
@@ -94,4 +95,10 @@ hr {
     font-size: 1.5vh;
     margin-left: 12.5%;
     margin-right: 25%;
+}
+
+@media print {
+    .new-page {
+        page-break-before: always;
+    }
 }

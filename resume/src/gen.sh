@@ -19,6 +19,6 @@ pandoc -f html -t html5 -o resume.pdf \
     -V margin-top=10 \
     -V margin-left=5 \
     -V margin-right=5 \
-    -V margin-bottom=5 \
+    -V margin-bottom=20 \
     -V papersize=letter \
     <(sed '/<nav>/,/<\/nav>/d' ../resume.html)

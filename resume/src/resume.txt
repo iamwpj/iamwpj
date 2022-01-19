@@ -60,3 +60,50 @@ Familiar Technologies
 -   Workflow: GitLab CI, Rundeck, Jira
 -   Logging, Alerting, & Metrics: rsyslog, Elasticseach, Kibana,
     Logstash, OSSEC (Wazuh), Icinga, PagerDuty, Prometheus, Grafana
+
+Special Projects
+
+------------------------------------------------------------------------
+
+-   IPAM migration: Review and select a product to integrate management
+    of DHCP and DNS. I worked with a small team to evaluate options and
+    choose the best solution from provided bids. Once a product was
+    selected I co-led the migration onto the product and helped to
+    resolve technical issues.
+-   Centralized logging: I took over a failing single node log search
+    server (Graylog) and migrated to a multi-node Elasticsearch,
+    Logstash, and Kibana cluster. I maintained an evaluation deployment
+    of that service for several years as it gained support and traction
+    for the value offered. It has been adopted as an integral service
+    and is being integrated into a production lifecycle.
+-   Network device monitoring automation: Create a system to automate,
+    import, and expand our service monitoring of network devices. The
+    automation was needed to replace a cumbersome manual process that
+    was not being completed effectively. I also expanded the service to
+    enable network engineers to develop custom monitors and use a CI
+    workflow to activate them.
+-   IT service management platform migration: I worked with a small team
+    to review and evaluate replacement options for our feature limited
+    service platform. We chose Jira Service Desk to integrate with
+    another product that was being implemented simultaneously — Jira
+    Software. I served on both teams and helped to ensure the products
+    would be a good fit and the decisions that were made helped to align
+    with IT's goals for customer service. I also handled the migration
+    of data from our previous ticket system to Jira Service Desk by
+    creating custom API tooling.
+-   Web learning application: I maintained a custom application that
+    allows instructors to teach classes about WordPress, SEO, MySQL
+    databases, and web development for two years before beginning a full
+    rebuild to support Python 3. I built a new backend layer and adapted
+    the PHP web frontend to be more secure and have an updated look. The
+    backend uses Redis for user caching and task scheduling and has a
+    custom API to interface with directly as well as be the connection
+    to the frontend. I also integrated the frontend login to the campus
+    solution.
+-   Telecom system replacement evaluation: I helped to lead a team
+    evaluating phone system migration options. As an adminstrator of our
+    Avaya infastructure I was able to recognize the weakness and
+    strengths in the implementations of different offerings. As this
+    project is continuing to a migration phase I have worked to plan out
+    processes for things likes e911 support, user provisioning, and
+    continued support of legacy devices.
