@@ -1,0 +1,43 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" $if(lang)$ lang="$lang$" xml:lang="$lang$" $endif$>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="generator" content="pandoc" /> $for(author-meta)$
+    <meta name="author" content="$author-meta$" /> $endfor$ $if(date-meta)$
+    <meta name="date" content="$date-meta$" /> $endif$
+    <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+    <link rel="stylesheet" href="$css$" $if(html5)$$else$type="text/css" $endif$ />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠</text></svg>"> $for(header-includes)$ $header-includes$ $endfor$
+</head>
+
+<div>
+    <button id='home-button' onclick="location.href='https://iamwpj.com/scraps'"> 🏡 HOME </button>
+    <button id='dark-button' onclick="darkMode()"> 🌓  </button>
+    <br>
+</div>
+
+<nav>
+    $for(include-before)$ $include-before$ $endfor$ $if(title)$
+    <p>
+        <strong class="title">$title$</strong> $if(subtitle)$
+        <em>$subtitle$</em>$endif$ $for(author)$$author$$endfor$ $if(date)$ :: $date$$endif$
+    </p>
+    $endif$
+</nav>
+
+<body>
+    $body$ $for(include-after)$ $include-after$ $endfor$
+</body>
+
+</html>
+
+<script>
+    function darkMode() {
+        document.body.classList.toggle("dark-mode");
+        document.body.blockquote.classList.toggle("bq-dark-mode");
+    }
+</script>
