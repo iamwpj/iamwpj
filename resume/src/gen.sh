@@ -14,6 +14,7 @@ pandoc -t markdown_strict -f html -o resume.md <(sed '/<nav>/,/<\/nav>/d' ../res
 # .pdf, lots of corrections
 # Strip <nav> block
 pandoc -f html -t html5 -o resume.pdf \
+    --pdf-engine=/usr/local/bin/wkhtmltopdf \
     --css=../resume.css \
     -V title:"" \
     -V margin-top=10 \

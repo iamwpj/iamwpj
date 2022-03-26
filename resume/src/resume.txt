@@ -31,9 +31,9 @@ automation and stability.
 -   Web cluster management
 -   High performance compute administrator
 -   Telecom server administration (Avaya)
--   General Linux system administration (all flavors, Puppet)
+-   Linux system administration (all flavors, Puppet)
 -   IPAM and network authentication (RADIUS, NAC)
--   PCI and security hardening
+-   PCI and security hardening (OSSEC, CIS-CAT)
 
 Aces
 
