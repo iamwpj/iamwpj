@@ -1,3 +1,4 @@
 *.bak
 test.sh
 test.py
+.DS_Store
