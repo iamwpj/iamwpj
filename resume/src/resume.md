@@ -46,7 +46,7 @@ healthcare provider.
 -   Active Directory Management
 -   DHCP, DNS, IP address management
 -   Desktop support, Windows 7-10 migration
--   Network, telecom (Avaya), and firewall (Fortigate) support
+-   Network, telecom, and firewall support
 -   vSphere management and Veeam backups
 -   HIPAA, and custom healthcare applications support
 
@@ -76,7 +76,7 @@ healthcare provider.
     Logstash, and Kibana cluster. I maintained an evaluation deployment
     of that service for several years as it gained support and traction
     for the value offered. It has been adopted as an integral service
-    and is being integrated into a production lifecycle.
+    and is being integrated into a production life cycle.
 -   **Network device monitoring automation:** Create a system to
     automate, import, and expand our service monitoring of network
     devices. The automation was needed to replace a cumbersome manual
@@ -101,10 +101,10 @@ healthcare provider.
     custom API to interface with directly as well as be the connection
     to the frontend. I also integrated the frontend login to the campus
     solution.
--   **Telecom system replacement evaluation:** I helped to lead a team
-    evaluating phone system migration options. As an adminstrator of our
-    Avaya infastructure I was able to recognize the weakness and
-    strengths in the implementations of different offerings. As this
-    project is continuing to a migration phase I have worked to plan out
-    processes for things likes e911 support, user provisioning, and
-    continued support of legacy devices.
+-   **On-prem Kubernetes proof of concept:** I performed a minimal three
+    node cluster installation of Kubernetes on virtual servers within
+    our on premise environment. A colleague and I evaluated our team's
+    ability to operate and integrate our current workflows into a
+    container environment. We determined it wasn't a good fit and turned
+    our focus to improving core infrastructure so that down the road the
+    migration would be easier.
