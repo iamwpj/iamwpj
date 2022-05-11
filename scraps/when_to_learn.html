@@ -1,0 +1,82 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="generator" content="pandoc" />     <meta name="author" content="Wes Jones" />      <meta name="date" content="2022-05-11" />     <title>When to learn the basics</title>
+    <link rel="stylesheet" href="src/template.css"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠</text></svg>"> 
+</head>
+
+<div>
+    <button id='home-button' onclick="location.href='https://iamwpj.com/scraps'"> 🗃 INDEX </button>
+    <button id='dark-button' onclick="darkMode()"> 🌓  </button>
+    <br>
+</div>
+
+<nav>
+         <p>
+        <strong class="title">When to learn the
+basics</strong>         <em><p>Learning the basics of Python, but after
+using the language for years.</p></em> Wes Jones  :: 11 May 2022
+    </p>
+    </nav>
+
+<body>
+    <h1 id="init"><strong>init</strong>()</h1>
+<p>I’m writing some new code and one of the pleasures (dismays?) of
+starting a fresh codebase is defining your “infrastructure”. Loading
+logging. Defining a configuration standard. Integrate CI and creating a
+runbook template. Why shouldn’t I revisit my code writing too?</p>
+<p>I’ve known for the past few years I’ve written Python that I’m only
+using the basics of the language. I don’t use static types or
+decorators. I avoid classes and of course unit testing is a chuckle. I’m
+not going to add all of that into my workflow right now, but in the past
+I’ve always been good about composing my infrastructure components to
+ensure that down-the-road I don’t have to refactor a <em>huge</em> chunk
+of a project to allow for a basic change — so I’ll improve my Python
+writing.</p>
+<p><strong>Areas of focus:</strong></p>
+<ul>
+<li>Use data models, <a
+href="https://docs.python.org/3/reference/datamodel.html"
+class="uri">https://docs.python.org/3/reference/datamodel.html</a>.
+Specifically special methods and other core features beyond the typical
+dicts and lists. If I compose my data to an object that supports these
+functions I can more easily pass it through logic — or even limit the
+amount of logic handling I’ll have to do!</li>
+<li>Catch exceptions (and handle them!), <a
+href="https://docs.python.org/3/tutorial/errors.html"
+class="uri">https://docs.python.org/3/tutorial/errors.html</a>. This is
+only feasible since I’ll be doing a better job managing what data gets
+stored in my objects. I find myself looking to merge datasets often
+enough, that I’ve gotten use to just using a couple of iterators to dump
+data blindly to a new dict. No more blindness!</li>
+<li>Using list comphrension for managing logic, <a
+href="https://www.geeksforgeeks.org/python-list-comprehension-and-slicing/"
+class="uri">https://www.geeksforgeeks.org/python-list-comprehension-and-slicing/</a>.
+I understand this isn’t a new paradigm of coding, I’ve pondered if it
+goes against Python’s readability advantages, but I find that in my
+workflow I enjoy it. I’m tired of spending time buried in tabbed
+iterations.</li>
+</ul>
+<p>That’s all. Just a couple of points. I’m not an expert, but I write
+Python all the time, yet aside from <code>def</code> and some clever
+<code>for</code> loops I rarely find myself pushing into new</p> 
+</body>
+
+</html>
+
+<script>
+    function darkMode() {
+        document.body.classList.toggle("dark-mode");
+        document.body.blockquote.classList.toggle("bq-dark-mode");
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.toggle("dark-mode");
+        document.body.blockquote.classList.toggle("bq-dark-mode");
+    }
+</script>
