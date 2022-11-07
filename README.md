@@ -6,6 +6,8 @@
 
 🐥 [Twitter](https://twitter.com/iamwpj)
 
+🐘 <a rel="me" href="https://mastodon.social/@iamwpj">Mastodon</a> <!-- Use this to make Mastodon verify my site -->
+
 📫 [Email](mailto:wes@iamwpj.com)
 
 # Interests
