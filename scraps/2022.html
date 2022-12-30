@@ -1,0 +1,232 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="generator" content="pandoc" />     <meta name="author" content="Wes Jones" />      <meta name="date" content="2022-12-28" />     <title>2022, A Year in Review</title>
+    <link rel="stylesheet" href="src/template.css"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠</text></svg>"> 
+</head>
+
+<div>
+    <button id='home-button' onclick="location.href='https://iamwpj.com/scraps'"> 🗃 INDEX </button>
+    <button id='dark-button' onclick="darkMode()"> 🌓  </button>
+    <br>
+</div>
+
+<nav>
+         <p>
+        <strong class="title">2022, A Year in
+Review</strong>         <em><p>Studying my most recent trip around the
+sun.</p></em> Wes Jones  :: 28 December 2022
+    </p>
+    </nav>
+
+<body>
+    <p>I had a good year. I wouldn’t be writing this if I had a bad
+year. You shouldn’t judge your year against anyone who writes up a nice
+little year in review like this.</p>
+<h1 id="on-being-30">On being 30</h1>
+<p>I wasn’t happy to turn 30, but I am happy to be 30. I have enough
+time out of the way to feel comfortable for the first time since I was
+young. I still learn new things, but I can start to see more people who
+have always been in my life have either recently stopped that or stopped
+that some time ago. Some people haven’t learned anything new in decades.
+Others might have stopped and then started again.</p>
+<p>I’m 30 and I have the confidence of someone who is comfortable with
+themselves – so I can share something about the world. I might even be
+right! What if I had stopped learning new things though? These people in
+my life who had wisdom, they stopped. <em>They</em> should be sharing
+wisdom about the world with <em>me</em>.</p>
+<h1 id="work">Work</h1>
+<p>I don’t think I’ve ever had such a consequential year at work before.
+I worked on three projects that have taken years to create. I don’t know
+if I’ve communicated this well at work, but now as a I sit reflect, I’m
+impressed. In my first couple of years on the job (2017 &amp;
+early-2018) I looked around me and made some suggestions – here are the
+relevant three: * Centralized logging should be prioritized * Find a
+replacement solution for HPC * Evaluate replacing phone system; develop
+a 5 year plan</p>
+<p>I wish I could share the “Goals &amp; Accomplishments” notes to prove
+this, but I have been pushing for these things for five years.</p>
+<h2 id="logging-cluster">Logging cluster</h2>
+<p>One of my first big undertakings at work was rehabilitating an old
+Graylog server. It was centralizing logs for the networking team. It was
+clearly overwhelmed and needed some new nourishment. I poked around on
+this issue for sometime – avoiding something I suspect I knew pretty
+soon. I acquired some out-of-warranty hardware and in the summer of 2017
+built my first Elasticsearch cluster. This pet cluster was
+<em>fine</em>, but clearly not going to win any shows. I felt the
+scrutiny:</p>
+<ul>
+<li>“Why do we need this? Most of these logs are useless.”</li>
+<li>“How can you spend so much time on LOGS when there’s other stuff to
+do?!”</li>
+</ul>
+<p>I was patient and continued to expand where I could. Collecting more
+logs and improving the reliability. My coworkers started to see the
+rationale. I didn’t have a lot of time to dedicate to the project, but
+over the years progress was made. In January of 2022, I finally was able
+to build a production grade OpenSearch cluster. It took five years to
+complete this project. Nearly immediately after finishing the set up and
+migration, a new coworker took on the task of bringing in all of the
+missing logs. He’s added monitors and we are addressing things I could
+have only dreamed of five years ago when I first drew a diagram of what
+a “log cluster” could be. Coming up on one year in, I’m working on
+passing the management to the new coworker. I’ve done the hard part of
+being patient and learning the tools.</p>
+<p>I asked for a promotion after completing this project.</p>
+<h2 id="high-performance-compute">High performance compute</h2>
+<p>Sometime ago I inherited a compute cluster. It would have been high
+performance when it was bought, but alas it had become just
+<em>compute</em>. It was woefully out of date and infeasible to improve.
+I kept it running, but just at that. Some limited research was being
+done utilizing it, but many professors around campus were left to use
+their own specialized machines or rely on publicly accessible HPC
+resources.</p>
+<p>A request came in searching for a solution to using a popular biology
+compute tool for a class project. We waffled on this, but explored the
+options anyway. Smelling doom on the horizon, the original cluster took
+the opportunity to die in 2020. This confluence of events forced me to
+implement a temporary setup. It was two old vSphere hosts, some scrap
+storage and yet – more power than the previous cluster. A couple of
+hooks and the biology tool could handle the classes simultaneous
+workload. I had to get cozy with Slurm on the fly, but after years of
+dabbling in HPC when called upon, I had <em>just</em> enough grasp to
+get it running.</p>
+<p>In 2021, we purchased an <em>actual</em> cluster – and this summer it
+was installed. It’s small, but for the students who need to learn the
+basics – the size doesn’t matter. The new cluster has all the
+infrastructure the previous ones were missing. I took all of August and
+September this year and built modules and integrated tools. It’s surreal
+seeing this happen. Requests come in for things like Julia, R, GSL, and
+AlphaFold. I can finally meet those.</p>
+<h2 id="the-phone-system">The phone system</h2>
+<p>In my interviews for my job (back in 2016), I insisted I didn’t want
+to work with phones. I had previously worked with Avaya, and hey, what
+do you know, my new job had (a MUCH larger) Avaya deployment. They
+ignore my protests and I’m too nice so there I was – working on phones.
+If you’ve never worked with black box enterprise systems like Avaya you
+might find some of this extreme, but it’s not.</p>
+<p>The 24/7 support isn’t typically the safety net you’re looking for.
+Phone systems are typically extremely reliable. We’ve had scenarios
+where unplugging a USB from a <em>VIRTUAL</em> server causes all the
+phones to reboot, but regardless of the stupidity of that behavior, the
+phones come online again mostly without any hiccup. The issues you face
+are much more…edge-case. It’s finicky to work through this with support
+and immensely time consuming. This system is built on jargon, clever
+1970s engineering, and coked up managers from the 1980s (the last time
+Avaya innovated). After chasing some of this I was looking for something
+to make the process of manually managing thousands of users and
+extensions more tolerable. I was a fallback on this stuff – so things
+sat on the back burner.</p>
+<p>In 2019, we spent far too much money to upgrade some stuff and I
+began to revisit my previous suggestions that we make a five year plan
+to get off this system. I really thought about it. We couldn’t afford to
+own this anymore. We couldn’t afford a new hire (or even find one!), we
+couldn’t afford the contracts, we couldn’t afford to pay specialized
+services to preform the necessary updates. We don’t have enough staff in
+the department to have someone doing manual labor that Avaya requires.
+It was time to go. I made my pitch again.</p>
+<p>2020 reared it’s ugly head. It was time to go. A year of reviews and
+we selected the replacement. I helped, but only that. It was a team and
+a very hardworking coworker that did the physical labor of swapping
+phones and met with every group to build their programming. We did a
+nearly daily move of around 20 people for months. That’s the tip of the
+iceberg though. If we wanted this phone system to pay for itself, my job
+starts <em>now</em> that most nearly all the phones have moved to the
+new system. It’s time to tether the floating satellite back to the
+mother ship. Every little thing that can interconnect will. Users will
+automatically be provisioned, extensions will be dynamically added. We
+will watch logs, we will monitor devices. I spent five years asking for
+more work to do. What a fool!</p>
+<h2 id="other-things">Other things</h2>
+<ul>
+<li>I feel like a made a leap in my skills with Python. Something kicked
+in I’m using more of the <code>builtins</code> and I feel more fluent in
+the language than ever before.</li>
+<li>I got a promotion and a raise. I was unhappy about having to ask. If
+you’re a manager, don’t rely on your people to ask for promotions. Ask
+if they have a timeline or indicate that you’re going to evaluate them
+for a promotion, but looking for <em>xyz</em> before going down that
+route. Don’t leave that ball in their court. The easiest way for people
+to get promotions and raises is for them to leave the company. It
+doesn’t have to be like that.</li>
+<li>I like what I’m doing. I have found real happiness in doing my work.
+I’ve gotten more technical and surprised myself by enjoying that. This
+isn’t something 20-year old would have expected 30-year old me to
+like.</li>
+</ul>
+<h1 id="lasik">LASIK</h1>
+<p>I’ve been a glasses-wearer for half my life, but during Covid enough
+was enough. I was tired of fumbling with contacts and my fogged up
+glasses while wearing a mask or ALL OF WINTER. I ponied up and got LASIK
+in March. I can’t recommend it enough. It’s a breath of fresh air.
+There’s a cult of LASIK and I’m in it.</p>
+<h1 id="on-friends">On friends</h1>
+<p>My friends are changing. There was one marriage and one divorce in
+our friend group this year and we couldn’t be happier for both. Losing a
+friend to the alt-right and another who mistreated his wife (we kept
+her, now happily divorced). I didn’t expect that either of these events
+would affect me nearly as much as they did. I am filled with pride to be
+friends with people who know what they’re about.</p>
+<p>If you know someone who is leaving their spouse after being
+manipulated for years, I hope you can see just how brave they are.</p>
+<h1 id="grad-school">Grad school</h1>
+<p>I graduated college with a B.A. in History years ago. I was a social
+science education major for much of my college years, but switched to
+history towards the end. Focusing on history was one of my favorite
+times in college.</p>
+<p>I’ve always wanted to get a computer science degree and after years
+of kicking it around I just <em>did</em> it. I enrolled in a distance
+grad program that will allow me to acquire first a graduate certificate
+in cyber security and then a full masters in it. I have to achieve a
+certificate first (it’s all part of the same program), as part of a
+probational process since I don’t have a CS undergrad. I tell people I’m
+converting my History B.A. to a CS masters degree.</p>
+<p>School is fine, but it definitely hits different after being away for
+eight years. It’s common that people with CS degrees will suggest that
+most of your day-to-day is self taught. That’s likely true, but never
+fall into the trap of dismissing foundations.</p>
+<h1 id="a-new-home">A new home</h1>
+<p>My wife and I lived in our apartment for seven years. We moved in
+shortly before getting married and started looking for houses in 2017.
+We got serious in 2019. We were picky and took the availability of our
+local market for granted. 2020/21 housing market changes alarmed us, but
+we stuck to our guns. We had a certain type of house in mind and we
+liked our apartment. Don’t rush a decision. We bought a house we intend
+to die in. It’s from 1929 and filled with original hardwoods and builtin
+unpainted details. There’s room for me to work from home too. We walk to
+downtown and the farmers market.</p>
+<p>It was a good price and no bidding war occurred. Every star aligned
+and we painted the whole place, removed a ton of carpet, and moved in in
+October. We are happy and look forward to a lifetime of projects. This
+is the stuff that makes us happy: well thought out decisions and a task
+done well and right.</p>
+<h1 id="conclusion">Conclusion</h1>
+<p>It was an unusually good year. I wonder, were my other years bad?
+Maybe I was coasting. I cannot sense these things. I don’t subscribe to
+some of the belief systems about accomplishing goals in certain time
+frames or anything about when life events <em>should</em> occur. My wife
+and I have always grown and changed together. I think we have become
+wiser and learned to be confident in ourselves. We are not only
+individually more competent, but together we are stronger than ever.
+Could I have had a good year without her help? No. Don’t get into the
+habit of dismissing the foundations.</p> 
+</body>
+
+</html>
+
+<script>
+    function darkMode() {
+        document.body.classList.toggle("dark-mode");
+        document.body.blockquote.classList.toggle("bq-dark-mode");
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.toggle("dark-mode");
+        document.body.blockquote.classList.toggle("bq-dark-mode");
+    }
+</script>
