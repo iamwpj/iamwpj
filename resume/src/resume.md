@@ -74,17 +74,7 @@ management.
     are successful both on launch, but maintainable and continue to be
     extend past their initial availability. Examples of this:
     Transistion from Samanage to Jira Service Desk & Implementation of
-    Jira Projects (2019) and Zoom Phone Evaluation (2020-2021). I am
-    typically working on projects for years before I consider them
-    "completed" with planning, implementing, and then finally
-    post-implement improvements.
--   **Languages:** Bash, Python, some JavaScript/PHP
--   **Configuration Management:** Puppet
--   **Web:** Apache, MySQL, Redis, PHP/HTML/CSS/JS, WordPress
--   **Systems:** Linux, vSphere, Docker (testing only)
--   **Workflow:** GitLab CI, Rundeck, Jira
--   **Logging, Alerting, & Metrics:** rsyslog, Elasticseach, Kibana,
-    Logstash, Icinga, PagerDuty, Prometheus, Grafana
+    Jira Projects (2019) and Zoom Phone Evaluation (2020-2021).
 
 # Special Projects
 
@@ -94,8 +84,8 @@ management.
     search server (Graylog) and migrated to a multi-node Elasticsearch,
     Logstash, and Kibana cluster. I maintained an evaluation deployment
     of that service for several years as it gained support and traction
-    for the value offered. It has been adopted as an integral service
-    and is being integrated into a production life cycle.
+    for the value offered. In January 2022, I deployed OpenSearch as a
+    near production centralized log cluster.
 -   **IT service management platform migration:** I worked with a small
     team to review and evaluate replacement options for our feature
     limited service platform. We chose Jira Service Desk to integrate
