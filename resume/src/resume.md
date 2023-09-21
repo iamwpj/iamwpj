@@ -8,12 +8,13 @@
 
 ------------------------------------------------------------------------
 
+## Iowa State University
+
+**Ames - 2022 to 2024: *In progress* M.S. Cybersecurity**
+
 ## University of Northern Iowa
 
-### Cedar Falls - 2010 to 2015
-
-**B.A. History**, focus in education, government, literature, and
-sociology
+**Cedar Falls - 2010 to 2015: B.A. History**
 
 # Work History
 
@@ -21,68 +22,80 @@ sociology
 
 ## University of Northern Iowa
 
-### System and Network Administrator - Cedar Falls - 2016 to Present
+### Senior Systems Administrator - Cedar Falls - 2022 to Present
 
-Network infrastructure support, Linux servers, and networking. Focus on
-automation and stability.
+### Systems and Network Administrator - Cedar Falls - 2016 to 2022
 
--   Custom tool development (APIs, Bash, Python, Rundeck)
--   Logging (ELK, rsyslog) and metrics collection (Prometheus, Grafana)
--   SSL certificate management
--   Web cluster management
--   High performance compute administrator
--   Telecom server administration (Avaya)
--   Linux system administration (all flavors, Puppet)
--   IPAM and network authentication (RADIUS, NAC)
--   PCI and security hardening (OSSEC, CIS-CAT)
+I focus on automation to support a variety of servers and clusters.
+Other common tasks involve gluing APIs, databases, and data sources
+together with Python and Bash. I interact with a broad range of
+techonologies and resources – key components: Linux configuration
+management (Puppet), continuous integration and workbook scheduling
+(GitLab, Rundeck), log collection (OpenSearch), student learning
+servers, Zoom provisioning (ongoing), and high performance computing
+(Slurm, Bright Cluster).
 
 ## Aces
 
 ### IT Client Support - Cedar Falls - 2015 to 2016
 
 Direct client support for desktops and server administration for a
-healthcare provider.
+healthcare provider. Through this role I was exposed to a large swath of
+routine business and healthcare specific software. I developed the
+skills necessary to continue my career by working with networking and
+server technologies such as DHCP, DNS, firewalls, and vSphere
+management.
 
--   Active Directory Management
--   DHCP, DNS, IP address management
--   Desktop support, Windows 7-10 migration
--   Network, telecom, and firewall support
--   vSphere management and Veeam backups
--   HIPAA, and custom healthcare applications support
-
-# Familiar Technologies
+# Experience
 
 ------------------------------------------------------------------------
 
+-   **Cross-team communication.** In my first few years at University of
+    Northern Iowa, I worked with both the system administrator team and
+    network teams. I used the tools from one team to help the other --
+    managing servers with Puppet, securing web access with certificates,
+    creating a development workflow using GitLab, and building a more
+    efficient network access control system.
+-   **Discover and improve.** A key strength I have developed over the
+    years has been the ability to discover the "ins and outs" of a
+    system or software. When IT was relied on to take over a failing HPC
+    cluster, I was able to figure out how to access, secure, and
+    administer the aging system with minimal interruption for the few
+    users. I have since continued to incrementally improve the HPC
+    offering by building an in-house solution when the previous one
+    failed, finally, helping to plan and implement a new cluster in
+    2022.
+-   **Ensuring longevity of services.** Services should be maintainable
+    over time, this requires proper planning to assess needs of a
+    project, constant re-evalution during the implementation and early
+    years, and up-to-date documentation and monitoring. I have worked on
+    a variety of large scale projects that require accounting for a
+    diverse set of goals. I have worked to ensure that these projects
+    are successful both on launch, but maintainable and continue to be
+    extend past their initial availability. Examples of this:
+    Transistion from Samanage to Jira Service Desk & Implementation of
+    Jira Projects (2019) and Zoom Phone Evaluation (2020-2021). I am
+    typically working on projects for years before I consider them
+    "completed" with planning, implementing, and then finally
+    post-implement improvements.
 -   **Languages:** Bash, Python, some JavaScript/PHP
 -   **Configuration Management:** Puppet
 -   **Web:** Apache, MySQL, Redis, PHP/HTML/CSS/JS, WordPress
 -   **Systems:** Linux, vSphere, Docker (testing only)
 -   **Workflow:** GitLab CI, Rundeck, Jira
 -   **Logging, Alerting, & Metrics:** rsyslog, Elasticseach, Kibana,
-    Logstash, OSSEC (Wazuh), Icinga, PagerDuty, Prometheus, Grafana
+    Logstash, Icinga, PagerDuty, Prometheus, Grafana
 
 # Special Projects
 
 ------------------------------------------------------------------------
 
--   **IPAM migration:** Review and select a product to integrate
-    management of DHCP and DNS. I worked with a small team to evaluate
-    options and choose the best solution from provided bids. Once a
-    product was selected I co-led the migration onto the product and
-    helped to resolve technical issues.
 -   **Centralized logging:** I took over a failing single node log
     search server (Graylog) and migrated to a multi-node Elasticsearch,
     Logstash, and Kibana cluster. I maintained an evaluation deployment
     of that service for several years as it gained support and traction
     for the value offered. It has been adopted as an integral service
     and is being integrated into a production life cycle.
--   **Network device monitoring automation:** Create a system to
-    automate, import, and expand our service monitoring of network
-    devices. The automation was needed to replace a cumbersome manual
-    process that was not being completed effectively. I also expanded
-    the service to enable network engineers to develop custom monitors
-    and use a CI workflow to activate them.
 -   **IT service management platform migration:** I worked with a small
     team to review and evaluate replacement options for our feature
     limited service platform. We chose Jira Service Desk to integrate
@@ -101,10 +114,3 @@ healthcare provider.
     custom API to interface with directly as well as be the connection
     to the frontend. I also integrated the frontend login to the campus
     solution.
--   **On-prem Kubernetes proof of concept:** I performed a minimal three
-    node cluster installation of Kubernetes on virtual servers within
-    our on premise environment. A colleague and I evaluated our team's
-    ability to operate and integrate our current workflows into a
-    container environment. We determined it wasn't a good fit and turned
-    our focus to improving core infrastructure so that down the road the
-    migration would be easier.
