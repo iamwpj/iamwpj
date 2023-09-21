@@ -24,16 +24,14 @@
 
 ### Senior Systems Administrator - Cedar Falls - 2022 to Present
 
+As a senior, I work educate coworkers and establish long-term goals with
+my team, alongside previous responsibilities.
+
 ### Systems and Network Administrator - Cedar Falls - 2016 to 2022
 
-I focus on automation to support a variety of servers and clusters.
-Other common tasks involve gluing APIs, databases, and data sources
-together with Python and Bash. I interact with a broad range of
-techonologies and resources – key components: Linux configuration
-management (Puppet), continuous integration and workbook scheduling
-(GitLab, Rundeck), log collection (OpenSearch), student learning
-servers, Zoom provisioning (ongoing), and high performance computing
-(Slurm, Bright Cluster).
+I focus on automation to support a variety of servers and clusters. I
+interact with a broad range of techonologies and resources to help
+provide reliable IT at UNI.
 
 ## Aces
 
@@ -76,6 +74,34 @@ management.
     Transistion from Samanage to Jira Service Desk & Implementation of
     Jira Projects (2019) and Zoom Phone Evaluation (2020-2021).
 
+# Acknowledgements and Continuing Education
+
+------------------------------------------------------------------------
+
+-   [Throughput
+    Computing](https://chtc.cs.wisc.edu/events/2023/07/throughput-computing-2023);
+    HPC Conference Madison, WI - 2023
+-   [Panther First
+    award](https://recognition.uni.edu/panther-first-award); Service Hub
+    Implementation (Jira Service Desk) - 2019
+-   PCI Certified - 2018 to 2022
+-   Avaya Aura Certification - 2018
+-   HIPAA Certification - 2015 and 2016
+
+# Specific Skills
+
+------------------------------------------------------------------------
+
+-   **Languages:** Bash, Python
+-   **Configuration Management:** Puppet
+-   **Web:** Apache, MySQL, Redis, PHP/HTML/CSS/JS, WordPress
+-   **Authentication:** integrating into login systems: LDAP, Active
+    Directory, SAML
+-   **Systems:** Linux, vSphere, Docker (testing only)
+-   **Workflow:** GitLab CI, Rundeck, Jira
+-   **Logging, Alerting, & Metrics:** rsyslog, ELK (and OpenSearch,
+    etc), Icinga, PagerDuty, Prometheus, Grafana
+
 # Special Projects
 
 ------------------------------------------------------------------------
@@ -85,7 +111,7 @@ management.
     Logstash, and Kibana cluster. I maintained an evaluation deployment
     of that service for several years as it gained support and traction
     for the value offered. In January 2022, I deployed OpenSearch as a
-    near production centralized log cluster.
+    *near production* centralized log cluster.
 -   **IT service management platform migration:** I worked with a small
     team to review and evaluate replacement options for our feature
     limited service platform. We chose Jira Service Desk to integrate
