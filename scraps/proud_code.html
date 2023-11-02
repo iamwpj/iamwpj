@@ -1,0 +1,215 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta name="generator" content="pandoc" />     <meta name="author" content="Wes Jones" />      <title>Code that I think is neat</title>
+    <link rel="stylesheet" href="src/template.css"  />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🛠</text></svg>"> 
+</head>
+
+<div>
+    <button id='home-button' onclick="location.href='https://iamwpj.com/scraps'"> 🗃 INDEX </button>
+    <button id='dark-button' onclick="darkMode()"> 🌓  </button>
+    <br>
+</div>
+
+<nav>
+         <p>
+        <strong class="title">Code that I think is
+neat</strong>         <em><p>Humble brag? Show off? Maybe.</p></em> Wes
+Jones  :: 2 Nov 2023
+    </p>
+    </nav>
+
+<body>
+    <h1 id="background">Background</h1>
+<p>I find that every project I work on I tend to steer the code in a
+different direction. Often this is a response to the project. With
+Python, I have this flexibility – at times I focus on functions, other
+times I’ll give data the bulk of my attention.</p>
+<p>I used to write a lot of small Bash and Python interactions, but more
+and more my experience is trending toward larger projects that involve
+constructing an entire back-end using these languages. Either way – over
+the years I have written some neat code (I think).</p>
+<h1 id="auto-reestablish-api-session">Auto-reestablish API session</h1>
+<p>I encountered a service with an inconvenient combination of problems:
+it was slow to get all data, process it, and submit responses back
+incrementally. I couldn’t batch the problem, but this all left the
+interaction vulnerable to the session token timing out.</p>
+<p>The process to resolve this involved implementing Python
+<code>dataclasses</code> to manage both the connection details and API
+session token. This allowed the data to persist and be efficiently
+checked before every API interaction. When the <code>expiretime</code>
+was reached, a process to <code>_reestablish</code> the token was kicked
+off.</p>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> _reestablish(<span class="va">self</span>):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Use this to peroidically re-establish your </span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">    API Key. During long running API queries</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    you&#39;ll end up with an exipred token and receive</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    401 errors.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    This check is triggered to handle those.</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="va">self</span>.expiretime <span class="op">&lt;</span> <span class="bu">round</span>(time.time()):</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>        l.notice(</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>            <span class="ss">f&quot;API token session has expired. Expiration time: </span><span class="sc">{</span>datetime<span class="sc">.</span>fromtimestamp(<span class="va">self</span>.expiretime)<span class="sc">.</span>strftime(<span class="st">&#39;</span><span class="sc">%c</span><span class="st">&#39;</span>)<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="bu">object</span>.<span class="fu">__setattr__</span>(<span class="va">self</span>, <span class="st">&#39;token&#39;</span>, _token(test<span class="op">=</span><span class="va">self</span>.test))</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="bu">object</span>.<span class="fu">__setattr__</span>(<span class="va">self</span>, <span class="st">&#39;expiretime&#39;</span>, <span class="bu">round</span>(time.time()) <span class="op">+</span> <span class="va">self</span>.duration)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="bu">object</span>.<span class="fu">__setattr__</span>(<span class="va">self</span>, <span class="st">&#39;headers&#39;</span>, headers)</span></code></pre></div>
+<p>I’d never worked with manipulating the loaded <code>object</code>
+object in Python, but a dataclass can be manipulated with values from
+any function that has access to the object. I don’t know how
+<em>frequent</em> I will use this manipulation, but it was certainly
+useful here!</p>
+<h1 id="state-checks">State Checks</h1>
+<p>When I’m integrating data from several sources, there’s often an ugly
+combination of logic that will become unavoidable at some point. It’s
+along the lines of:</p>
+<pre class="psuedo"><code>if ( A in set1 and setB ) and not (if A.1 exists and ( A.1 == 2 )):
+    . . .</code></pre>
+<p>Gross.</p>
+<p>I had some really problematic code that was causing issues and went
+looking for design patterns in Python that would help to manage just
+this type of logic. I found a clever feature of Python: <a
+href="https://realpython.com/python-all/"><code>all()</code></a>.</p>
+<p>Here’s a readable chunk of code from the linked site:</p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> bool_exps <span class="op">=</span> [</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>...     <span class="dv">5</span> <span class="op">&gt;</span> <span class="dv">2</span>,</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>...     <span class="dv">1</span> <span class="op">==</span> <span class="dv">1</span>,</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>...     <span class="dv">42</span> <span class="op">&lt;</span> <span class="dv">50</span>,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>... ]</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;&gt;</span> all_true(bool_exps)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="va">True</span></span></code></pre></div>
+<p>My real world implementation is a little more…involved. I’m sure
+there’s performance advantages, but it’s also really nice to be able to
+<code>print</code> a dictionary in debug logging that would just show
+<em>why</em> the conditions aren’t met. I think I’ll use this for to
+create better auditing/reporting during evaluation processes.</p>
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> item <span class="kw">in</span> <span class="bu">list</span>(<span class="va">self</span>.data.SUBDICT.keys()):</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    state_check <span class="op">=</span> {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;item_id_exists&quot;</span>: <span class="va">True</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="st">&quot;item_unused&quot;</span>: <span class="va">True</span> </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="va">self</span>.data.SUBDICT[item] <span class="kw">not</span> <span class="kw">in</span> comparision_dict</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span> <span class="va">False</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    state_check <span class="op">=</span> {<span class="st">&quot;item_id_exists&quot;</span>: <span class="va">False</span>}</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> <span class="bu">all</span>(<span class="bu">list</span>(state_check.values())):</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    l.info(<span class="ss">f&quot;Beginning delete process for </span><span class="sc">{</span>item<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>state_check<span class="sc">}</span><span class="ss">&quot;</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="va">self</span>._checkitem(item)</span></code></pre></div>
+<h1 id="send-html-emails-in-bash">Send HTML emails in Bash</h1>
+<p><code>mail</code> can easily submit an email to a configure relay or
+mail server and provide some basic features. Presentation however…that
+requires some work. There are clear advantages to plain text, but
+anymore I really prefer to have a nice looking list/report that I can
+easily review. I don’t use emails for <em>monitoring</em> as much as I
+used to – instead it’s typically <em>reporting</em> – which should look
+nice!</p>
+<p>In Bash you can submit mail direct to the <code>sendmail</code>
+program. It takes a formatted email message, parses, and handles it.</p>
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">(</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="at">-e</span> From: serviceA@iamwpj.com</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="at">-e</span> To: wes@iamwpj.com</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="at">-e</span> Subject: Long running jobs</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="at">-e</span> Content-Type: text/html</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">echo</span> <span class="at">-e</span> <span class="st">&quot;</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;html&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;body&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="st">        The following jobs took longer this week:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;pre&gt;</span><span class="va">$(</span><span class="bu">echo</span> <span class="st">&quot;</span><span class="va">${results</span><span class="op">[@]</span><span class="va">}</span><span class="st">&quot;</span> <span class="kw">|</span> <span class="fu">sed</span> <span class="st">&#39;s/ /\n/g&#39;</span> <span class="kw">|</span> <span class="ex">column</span> <span class="at">-N</span> <span class="st">&quot;JOB,ID,START DATE, EXPECTED RUNTIME, ACTUAL RUNTIME&quot;</span> <span class="at">-t</span> <span class="at">-s</span><span class="st">&#39;,&#39;</span><span class="va">)</span><span class="st">&lt;/pre&gt;</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="st">        [</span><span class="va">$(</span><span class="fu">hostname</span> <span class="at">-f</span><span class="va">)</span><span class="st">] - </span><span class="va">$(</span><span class="fu">date</span><span class="va">)</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="st">        &lt;/body&gt;</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="st">    &lt;/html&gt;</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="st">    &quot;</span></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="kw">)</span> <span class="kw">|</span> <span class="ex">/usr/sbin/sendmail</span> <span class="at">-t</span></span></code></pre></div>
+<p>Would produce a message like this:</p>
+<blockquote>
+<p>The following jobs took longer this week:</p>
+<pre class="plain"><code>JOB    ID  START DATE                  EXPECT RUNTIME  ACTUAL RUNTIME
+FeedMe 24  2023-09-08T11:35:00-0500    12s             94s</code></pre>
+<p>[feedme.iamwpj.com] - Fri Sep 8 17:51:14 CDT 2023</p>
+</blockquote>
+<p>If I tried to send a plain formatted table in Bash, I can’t control
+the plain text table – the email viewer will simply output the text in
+the system font:</p>
+<blockquote>
+<p>The following jobs took longer this week:</p>
+<p>JOB ID START DATE EXPECTED RUNTIME ACTUAL RUNTIME<br> FeedMe 24
+“2023-09-08T11:35:00-0500” 12s 94s</p>
+<p>[feedme.iamwpj.com] - Thu Nov 2 11:32:37 CDT 2023</p>
+</blockquote>
+<p>This pattern is easily reproducible and <em>looks nice</em> in
+scripts. It means I can simply drop my variables and subshells directly
+into the HTML layout. In the Bash world, I consider that a big win.</p>
+<p><strong>The one major detraction here: you cannot send attachments
+(<a
+href="https://unix.stackexchange.com/questions/223636/can-sendmail-include-an-attachment/507171#507171">well…not
+reasonably at least IMHO</a>) using this method</strong></p>
+<h1 id="shell-parameter-expansions">Shell Parameter Expansions</h1>
+<p>I <em>love</em> <a
+href="https://www.gnu.org/software/bash/manual/html_node/Shell-Parameter-Expansion.html">shell
+parameter expansions</a>. I think of it like the regex of Bash
+variables. It’s ugly, relatively unreadable, but still worth it.</p>
+<p>Let’s look at my favorites:</p>
+<h2 id="defaults">Defaults</h2>
+<p>If you suspect you might collect a <code>null</code> variable that
+you don’t want, Bash can allow you set a default:</p>
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> var=</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> : <span class="va">${var</span><span class="op">:=</span>DEFAULT<span class="va">}</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="va">$var</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="ex">DEFAULT</span></span></code></pre></div>
+<h2 id="pattern-matching">Pattern Matching</h2>
+<ul>
+<li>https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html</li>
+</ul>
+<p>I use this a lot to manage subdirectories and dynamically specify
+either a <em>file</em> or it’s containing <em>directory</em> without
+having multiple variables or using <code>awk</code> to parse out
+components.</p>
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> data_location=<span class="st">&#39;data/folderA/mydata.txt&#39;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Directories:</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="va">${data_location</span><span class="op">%</span>/<span class="pp">**</span><span class="va">}</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="ex">data/folderA</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="va">${data_location</span><span class="op">##</span><span class="pp">*</span>/<span class="va">}</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="ex">mydata.txt</span></span></code></pre></div>
+<h2 id="replacement">Replacement</h2>
+<p>Frequently, you’ll get a resulting variable from an external source
+or something internally that needs to dynamically update. This means
+you’ll need to update the value within a variable. Rather than
+<em>overwriting</em> the variable, parameter expansion can replace
+components:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> data_location=<span class="st">&#39;data/folderA/mydata.txt&#39;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> echo <span class="at">-e</span> <span class="va">${data_location</span><span class="op">/</span><span class="ss">my</span><span class="op">/</span>your<span class="va">}</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="ex">data/folderA/yourdata.txt</span></span></code></pre></div>
+<h1 id="conclusion">Conclusion</h1>
+<p>I’m sure there’s more, but these just hit me right today.</p> 
+</body>
+
+</html>
+
+<script>
+    function darkMode() {
+        document.body.classList.toggle("dark-mode");
+        document.body.blockquote.classList.toggle("bq-dark-mode");
+    }
+    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.toggle("dark-mode");
+        document.body.blockquote.classList.toggle("bq-dark-mode");
+    }
+</script>
