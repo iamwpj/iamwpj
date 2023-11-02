@@ -69,10 +69,14 @@ img {
 }
 
 pre code {
+    font-size: smaller;
+    font-family: monospace;
     color: seashell;
     background-color: dimgray;
     display: block;
     padding: 20px;
+    -webkit-overflow-scrolling: touch;
+    white-space: pre-wrap;
 }
 
 #home-button {

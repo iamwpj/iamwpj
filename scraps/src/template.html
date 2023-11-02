@@ -5,6 +5,15 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Style-Type" content="text/css" />
+    <!-- #start  highlight.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+
+    <!-- and it's easy to individually load additional languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script>
+    <!-- #end highlight.js -->
+
+    <script>hljs.highlightAll();</script>
     <meta name="generator" content="pandoc" /> $for(author-meta)$
     <meta name="author" content="$author-meta$" /> $endfor$ $if(date-meta)$
     <meta name="date" content="$date-meta$" /> $endif$

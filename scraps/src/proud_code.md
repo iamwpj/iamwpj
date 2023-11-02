@@ -99,7 +99,9 @@ In Bash you can submit mail direct to the `sendmail` program. It takes a formatt
         <body>
         The following jobs took longer this week:
 
-        <pre>$(echo "${results[@]}" | sed 's/ /\n/g' | column -N "JOB,ID,START DATE, EXPECTED RUNTIME, ACTUAL RUNTIME" -t -s',')</pre>
+        <pre>$(
+            echo "${results[@]}" | sed 's/ /\n/g' | column -N "JOB,ID,START DATE, EXPECTED RUNTIME, ACTUAL RUNTIME" -t -s','
+        )</pre>
 
         [$(hostname -f)] - $(date)
         </body>
@@ -112,17 +114,21 @@ Would produce a message like this:
 
 > The following jobs took longer this week:
 >```plain
->JOB    ID  START DATE                  EXPECT RUNTIME  ACTUAL RUNTIME
->FeedMe 24  2023-09-08T11:35:00-0500    12s             94s
+>JOB    ID  START_DATE          EST_RUNTIME     RUNTIME
+>FeedMe 24  2023-09-08T11:35    12s             94s
 >```
 >[feedme.iamwpj.com] - Fri Sep 8 17:51:14 CDT 2023
 
 If I tried to send a plain formatted table in Bash, I can't control the plain text table -- the email viewer will simply output the text in the system font:
 
+<!-- 
+This has to have a '<br>' tag because of the nature of block quotes in MD.
+It's still representative of the email content.
+-->
 >The following jobs took longer this week:
 >
->JOB     ID  START DATE                   EXPECTED RUNTIME   ACTUAL RUNTIME<br>
->FeedMe  24  "2023-09-08T11:35:00-0500"  12s                94s
+>JOB     ID  START_DATE         EST_RUNTIME   RUNTIME<br>
+>FeedMe  24  2023-09-08T11:35   12s           94s
 >
 >[feedme.iamwpj.com] - Thu Nov  2 11:32:37 CDT 2023
 
@@ -149,7 +155,7 @@ DEFAULT
 
 ## Pattern Matching
 
-* https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html
+* <https://www.gnu.org/software/bash/manual/html_node/Pattern-Matching.html>
 
 I use this a lot to manage subdirectories and dynamically specify either a _file_ or it's containing _directory_ without having multiple variables or using `awk` to parse out components.
 
@@ -158,6 +164,7 @@ $ data_location='data/folderA/mydata.txt'
 # Directories:
 $ echo -e ${data_location%/**}
 data/folderA
+# File
 $ echo -e ${data_location##*/}
 mydata.txt
 ```

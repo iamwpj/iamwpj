@@ -20,6 +20,7 @@ else
     pandoc \
         -s "$post".md \
         -o ../"$post".html \
+        --no-highlight \
         --from=markdown+yaml_metadata_block \
         --standalone \
         --template template.html \
