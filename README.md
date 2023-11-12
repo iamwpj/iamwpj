@@ -4,7 +4,9 @@
 
 📝 [Posts](https://iamwpj.com/scraps)
 
-🐥 [Twitter](https://twitter.com/iamwpj)
+📄 [Papers](./papers/)
+
+🧵 [Threads](https://www.threads.net/@iamwpj)
 
 🐘 <a rel="me" href="https://mastodon.social/@iamwpj">Mastodon</a> <!-- Use this to make Mastodon verify my site -->
 
