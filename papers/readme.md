@@ -31,3 +31,11 @@ complicated set of policies – one which would allow for exploitable loopholes!
 redirected at the process of exchanging data for money (or other data).
 
 [They Only Want You For Your Data: Data brokers are turning everything about us into a commodity market.pdf](./They%20Only%20Want%20You%20For%20Your%20Data.pdf)
+
+# Using a CNN AI model to detect generated images
+
+> Detecting generated images is an increasingly preva- lent need in forensics. Convolutional neural networks (CNN) are a model of AI training that predates the more popular usage of transformers in popular language models today (e.g., GPT-1 and newer). I will continue to expand the application of CNN models to image assessment by training a model that contains two categories: real and synthetic human faces. This model will then be utilized to assess a variety of images generated from various methods (unknown to the trained model) of image generation. By asses a naive implementation (one without in-depth filtering or other image contexts), I am attempting to establish the feasibility of a long-term solution to more simple pre-trained models that can be used to AI generated image detection.
+
+[A Naive CNN Application to AI Generated Image Detection](./A%20Naive%20CNN%20Application%20to%20AI%20Generated%20Image%20Detection.pdf)
+
+_See more in the [supporting repository](https://github.com/iamwpj/naive-cnn-identifier)._
