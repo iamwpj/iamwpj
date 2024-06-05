@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="resume.css">
+    <title>Wesley Jones Curriculum Vitae</title>
+</head>
+
+<nav>
+    <button onclick="location.href='https://github.com/iamwpj/iamwpj/raw/main/resume/src/cv.pdf'" type="button">
+        Download PDF </button>
+    <button onclick="location.href='https://github.com/iamwpj/iamwpj/tree/main/resume'" type="button"> Go to Repo
+    </button>
+</nav>
+
+<body>
+    <!-- Contact Header -->
+    <div id="contact">
+        <h1>Wesley Jones</h1>
+        <h2>Cedar Falls, IA - <a href="mailto:wes@iamwpj.com">wes@iamwpj.com</a></h2>
+        <hr>
+    </div>
+
+    <div id="sections">
+        <!-- Education Section -->
+        <h1>Education</h1>
+        <hr>
+        <h2>Iowa State University</h2>
+        <p><strong>Ames - 2022 to 2024: <em>In progress</em> M.S. Cybersecurity</strong></p>
+        <h2>University of Northern Iowa</h2>
+        <p><strong>Cedar Falls - 2010 to 2015: B.A. History</strong></p>
+
+
+        <!-- Work Section -->
+        <h1>Work History</h1>
+        <hr>
+
+        <h2>University of Northern Iowa</h2>
+        <h3>Senior Systems Administrator - Cedar Falls - 2022 to Present</h3>
+        <p>As a senior, I work educate coworkers and establish long-term goals with my team, alongside previous
+            responsibilities.</p>
+
+        <h3>Systems and Network Administrator - Cedar Falls - 2016 to 2022</h3>
+        <p>I focus on automation to support a variety of servers and clusters. I interact with a broad range of
+            techonologies and resources to help provide reliable IT at UNI.</p>
+
+        <h2>Aces</h2>
+        <h3>IT Client Support - Cedar Falls - 2015 to 2016</h3>
+        <p>Direct client support for desktops and server administration for a healthcare provider. Through this role I
+            was exposed to a large swath of routine business and healthcare specific software. I developed the skills
+            necessary to continue my career by working with networking and server technologies such as DHCP, DNS,
+            firewalls, and vSphere management.</p>
+
+        <!-- Conferences & Workshops-->
+        <h1>Conferences & Workshops</h1>
+        <hr>
+        <h2>High-Performance Computing Solutions for Small Midwest Institutions</h2>
+        <h3>2024 - Cedar Falls, IA</h3>
+        <p>The University of Northern Iowa is utilizing a planning grant from the National Science Foundation to
+            decipher the ways in which campus can help to provide high performance compute resources to other similiar
+            and smaller institutions in the Midwest. The focus of the workshop was to cover some outstanding concerns
+            and establish communications with partner schools for future collaboration.
+        </p>
+        <h2>Throughput Computing</h2>
+        <h3> 2023 - Madison, WI</h3>
+        <p>A conference involving high performance computing enabled by the Open Science Grid project, a collection of
+            institutional research centers across the country. This conference offered information about ongoing
+            researching happening on the OSG network research clusters and technical details for furthering research.
+        </p>
+
+        <!-- Coursework -->
+        <h1 class="new-page">Course Work</h1>
+        <hr>
+        <ul>
+            <li><a
+                    href="https://github.com/iamwpj/iamwpj/blob/main/papers/WireGuard:%20Trusting%20Network%20Layer%20Authentication%20in%20a%20New%20Protocol.pdf">Exploring
+                    Wireguard</a>: a review of the software security in WireGuard and related readings.</li>
+            <li><a
+                    href="https://github.com/iamwpj/iamwpj/blob/main/papers/They%20Only%20Want%20You%20For%20Your%20Data.pdf">Ethics
+                    of data brokers</a>: I analyzed the history and make up data brokers' consumer categorization. Put
+                into context, the ethical process of assigning user groups to buckets and relying on these for reliable
+                marketable groups is a process fraught with complicated assumptions.</li>
+            <li><a
+                    href="https://github.com/iamwpj/iamwpj/blob/main/papers/A%20Naive%20CNN%20Application%20to%20AI%20Generated%20Image%20Detection.pdf">Using
+                    a CNN AI model to detect generated images</a>: This is a naive implementation and method of image
+                trust detection, but there are indicates that the technique is viable — with proper training and tuning
+                AI networks can detect generated content without having to build new parameter sets for sepcific details
+                in an image.</li>
+            <li></li>
+        </ul>
+
+        <!-- Skills -->
+        <h1>Specific Skills</h1>
+        <hr>
+        <ul>
+            <li><strong>Languages: </strong>Bash, Python</li>
+            <li><strong>Configuration Management: </strong>Puppet</li>
+            <li><strong>Systems: </strong>Linux, vSphere, Docker</li>
+            <li><strong>Workflow: </strong>GitLab CI, Rundeck, Jira</li>
+            <li><strong>Logging, Alerting, & Metrics: </strong>rsyslog, ELK (and OpenSearch, etc),
+                Icinga, PagerDuty, Prometheus, Grafana</li>
+            <li><strong>High Performance Computing: </strong>Slurm, OpenMPI</li>
+        </ul>
+
+        <!-- Projects -->
+        <h1 class="new-page">Special Projects</h1>
+        <hr>
+        <ul>
+            <li><strong>Centralized logging: </strong>I took over a failing single node log search server (Graylog) and
+                migrated to a multi-node Elasticsearch, Logstash, and Kibana cluster. I maintained an evaluation
+                deployment of that service for several
+                years as it gained support and traction for the value offered. Finally, I was able to deploy OpenSearch
+                as centralized log cluster.</li>
+            <li><strong>Network device monitoring automation: </strong>Create a system to automate, import, and expand
+                our service monitoring of network devices. The automation was needed to replace a cumbersome manual
+                process that was not being completed
+                effectively. I also expanded the service to enable network engineers to develop custom monitors and use
+                a CI workflow to activate them.</li>
+            <li><strong>High performance compute cluster: </strong>I have operated the UNI HPC environment since 2018,
+                consisting of a few different iterations. During the initial years, we worked on a plan with the
+                academic parties on campus to migrate from an ad-hoc environment that I had built with spare hardware to
+                a more sustainable permanent cluster. In 2022, we implemented a new cluster and I have continued to
+                support it by providing software installation, parallelized computing skills, access and authentication,
+                and advisement for continued growth of the cluster.</li>
+        </ul>
+    </div>
+</body>
