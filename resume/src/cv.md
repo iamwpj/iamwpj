@@ -88,7 +88,11 @@ details for furthering research.
     but there are indicates that the technique is viable — with proper
     training and tuning AI networks can detect generated content without
     having to build new parameter sets for sepcific details in an image.
--   
+-   [Controlling Kafka data within a
+    pipeline](https://github.com/iamwpj/iamwpj/blob/main/papers/Standardizing%20Data%20For%20Kafka%20Consumers.pdf):
+    I designed and implemented a service within a Kafka pipeline to
+    encode and standardize data to ensure that neither consuming or
+    producing clients would have to deal with these processes.
 
 # Specific Skills
 
