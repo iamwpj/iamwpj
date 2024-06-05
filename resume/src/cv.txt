@@ -30,7 +30,7 @@ my team, alongside previous responsibilities.
 Systems and Network Administrator - Cedar Falls - 2016 to 2022
 
 I focus on automation to support a variety of servers and clusters. I
-interact with a broad range of techonologies and resources to help
+interact with a broad range of technologies and resources to help
 provide reliable IT at UNI.
 
 Aces
@@ -54,7 +54,7 @@ High-Performance Computing Solutions for Small Midwest Institutions
 
 The University of Northern Iowa is utilizing a planning grant from the
 National Science Foundation to decipher the ways in which campus can
-help to provide high performance compute resources to other similiar and
+help to provide high performance compute resources to other similar and
 smaller institutions in the Midwest. The focus of the workshop was to
 cover some outstanding concerns and establish communications with
 partner schools for future collaboration.
@@ -84,7 +84,7 @@ Course Work
     implementation and method of image trust detection, but there are
     indicates that the technique is viable — with proper training and
     tuning AI networks can detect generated content without having to
-    build new parameter sets for sepcific details in an image.
+    build new parameter sets for specific details in an image.
 -   Controlling Kafka data within a pipeline: I designed and implemented
     a service within a Kafka pipeline to encode and standardize data to
     ensure that neither consuming or producing clients would have to
