@@ -10,7 +10,7 @@
 
 ## Iowa State University
 
-**Ames - 2022 to 2024: *In progress* M.S. Cybersecurity**
+**Ames - 2022 to 2025: M.S. Cybersecurity**
 
 ## University of Northern Iowa
 
@@ -48,85 +48,84 @@ management.
 
 ------------------------------------------------------------------------
 
--   **Cross-team communication.** In my first few years at University of
-    Northern Iowa, I worked with both the system administrator team and
-    network teams. I used the tools from one team to help the other --
-    managing servers with Puppet, securing web access with certificates,
-    creating a development workflow using GitLab, and building a more
-    efficient network access control system.
--   **Discover and improve.** A key strength I have developed over the
-    years has been the ability to discover the "ins and outs" of a
-    system or software. When IT was relied on to take over a failing HPC
-    cluster, I was able to figure out how to access, secure, and
-    administer the aging system with minimal interruption for the few
-    users. I have since continued to incrementally improve the HPC
-    offering by building an in-house solution when the previous one
-    failed, finally, helping to plan and implement a new cluster in
-    2022.
--   **Ensuring longevity of services.** Services should be maintainable
-    over time, this requires proper planning to assess needs of a
-    project, constant re-evalution during the implementation and early
-    years, and up-to-date documentation and monitoring. I have worked on
-    a variety of large scale projects that require accounting for a
-    diverse set of goals. I have worked to ensure that these projects
-    are successful both on launch, but maintainable and continue to be
-    extend past their initial availability. Examples of this:
-    Transistion from Samanage to Jira Service Desk & Implementation of
-    Jira Projects (2019) and Zoom Phone Evaluation (2020-2021).
+- **Cross-team communication.** In my first few years at University of
+  Northern Iowa, I worked with both the system administrator team and
+  network teams. I used the tools from one team to help the other --
+  managing servers with Puppet, securing web access with certificates,
+  creating a development workflow using GitLab, and building a more
+  efficient network access control system.
+- **Discover and improve.** A key strength I have developed over the
+  years has been the ability to discover the "ins and outs" of a system
+  or software. When IT was relied on to take over a failing HPC cluster,
+  I was able to figure out how to access, secure, and administer the
+  aging system with minimal interruption for the few users. I have since
+  continued to incrementally improve the HPC offering by building an
+  in-house solution when the previous one failed, finally, helping to
+  plan and implement a new cluster in 2022.
+- **Ensuring longevity of services.** Services should be maintainable
+  over time, this requires proper planning to assess needs of a project,
+  constant re-evalution during the implementation and early years, and
+  up-to-date documentation and monitoring. I have worked on a variety of
+  large scale projects that require accounting for a diverse set of
+  goals. I have worked to ensure that these projects are successful both
+  on launch, but maintainable and continue to be extend past their
+  initial availability. Examples of this: Transistion from Samanage to
+  Jira Service Desk & Implementation of Jira Projects (2019) and Zoom
+  Phone Evaluation (2020-2021).
 
 # Acknowledgments and Continuing Education
 
 ------------------------------------------------------------------------
 
--   [Throughput
-    Computing](https://chtc.cs.wisc.edu/events/2023/07/throughput-computing-2023);
-    HPC Conference Madison, WI - 2023
--   [Panther First
-    award](https://recognition.uni.edu/panther-first-award); Service Hub
-    Implementation (Jira Service Desk) - 2019
--   PCI Certified - 2018 to 2022
--   Avaya Aura Certification - 2018
--   HIPAA Certification - 2015 and 2016
+- [Throughput
+  Computing](https://chtc.cs.wisc.edu/events/2023/07/throughput-computing-2023);
+  HPC Conference Madison, WI - 2023
+- [Panther First
+  award](https://recognition.uni.edu/panther-first-award); Service Hub
+  Implementation (Jira Service Desk) - 2019
+- PCI Certified - 2018 to 2022
+- Avaya Aura Certification - 2018
+- HIPAA Certification - 2015 and 2016
 
 # Specific Skills
 
 ------------------------------------------------------------------------
 
--   **Languages:** Bash, Python
--   **Configuration Management:** Puppet
--   **Web:** Apache, MySQL, Redis, PHP/HTML/CSS/JS, WordPress
--   **Authentication:** integrating into login systems: LDAP, Active
-    Directory, SAML
--   **Systems:** Linux, vSphere, Docker (testing only)
--   **Workflow:** GitLab CI, Rundeck, Jira
--   **Logging, Alerting, & Metrics:** rsyslog, ELK (and OpenSearch,
-    etc), Icinga, PagerDuty, Prometheus, Grafana
+- **Languages:** Bash, Python
+- **Configuration Management:** Puppet
+- **Web:** Apache, MySQL, Redis, PHP/HTML/CSS/JS, WordPress
+- **Authentication:** integrating into login systems: LDAP, Active
+  Directory, SAML
+- **Systems:** Linux, vSphere, Docker (testing only)
+- **Workflow:** GitLab CI, Rundeck, Jira
+- **Logging, Alerting, & Metrics:** rsyslog, ELK (and OpenSearch, etc),
+  Icinga, PagerDuty, Prometheus, Grafana
 
 # Special Projects
 
 ------------------------------------------------------------------------
 
--   **Centralized logging:** I took over a failing single node log
-    search server (Graylog) and migrated to a multi-node Elasticsearch,
-    Logstash, and Kibana cluster. I maintained an evaluation deployment
-    of that service for several years as it gained support and traction
-    for the value offered. In January 2022, I deployed OpenSearch as a
-    *near production* centralized log cluster.
--   **IT service management platform migration:** I worked with a small
-    team to review and evaluate replacement options for our feature
-    limited service platform. We chose Jira Service Desk to integrate
-    with another product that was being implemented simultaneously —
-    Jira Software. I served on both teams and helped to ensure the
-    products would be a good fit and the decisions that were made helped
-    to align with IT's goals for customer service. I also handled the
-    migration of data from our previous ticket system to Jira Service
-    Desk by creating custom API tooling.
--   **Web learning application:** I maintained a custom application that
-    allows instructors to teach classes about WordPress, SEO, MySQL
-    databases, and web development for two years before beginning a full
-    rebuild to support Python 3. I built a new backend layer and adapted
-    the PHP web frontend to be more secure and have an updated look. The
-    backend uses Redis for user caching and task scheduling and has a
-    custom API to interface with directly as well as be the connection
-    to the frontend. I also integrated the frontend login to the campus
-    solution.
+- **Centralized logging:** I took over a failing single node log search
+  server (Graylog) and migrated to a multi-node Elasticsearch, Logstash,
+  and Kibana cluster. I maintained an evaluation deployment of that
+  service for several years as it gained support and traction for the
+  value offered. In January 2022, I deployed OpenSearch as a *near
+  production* centralized log cluster.
+- **IT service management platform migration:** I worked with a small
+  team to review and evaluate replacement options for our feature
+  limited service platform. We chose Jira Service Desk to integrate with
+  another product that was being implemented simultaneously — Jira
+  Software. I served on both teams and helped to ensure the products
+  would be a good fit and the decisions that were made helped to align
+  with IT's goals for customer service. I also handled the migration of
+  data from our previous ticket system to Jira Service Desk by creating
+  custom API tooling.
+- **Web learning application:** I maintained a custom application that
+  allows instructors to teach classes about WordPress, SEO, MySQL
+  databases, and web development for two years before beginning a full
+  rebuild to support Python 3. I built a new backend layer and adapted
+  the PHP web frontend to be more secure and have an updated look. The
+  backend uses Redis for user caching and task scheduling and has a
+  custom API to interface with directly as well as be the connection to
+  the frontend. I also integrated the frontend login to the campus
+  solution.
