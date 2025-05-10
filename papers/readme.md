@@ -1,6 +1,6 @@
 # Papers
 
-I'm (as of Summer 2024) still in grad school at [Iowa State University for Cybersecurity ME](https://iowastateonline.iastate.edu/programs-and-courses/cybersecurity/cyber-security-master-of-engineering-in-cyber-security/). Periodically, I write papers for these classes. I take the work seriously -- they're not publishable, but they are indicative of my thoughts and skills.
+I'm (as of Summer 2024) still in grad school at [Iowa State University for Cybersecurity MS](https://iowastateonline.iastate.edu/programs-and-courses/cybersecurity/cyber-security-master-of-engineering-in-cyber-security/). Periodically, I write papers for these classes. I take the work seriously -- they're not publishable, but they are indicative of my thoughts and skills.
 
 ## Exploration of WireGuard 
 
