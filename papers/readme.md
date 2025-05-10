@@ -29,3 +29,15 @@ _See more in the [supporting repository](https://github.com/iamwpj/naive-cnn-ide
 [Standardizing Data For Kafka Consumers](./Standardizing%20Data%20For%20Kafka%20Consumers.pdf)
 
 _See more in the [supporting repository](https://github.com/iamwpj/kafka-types)_
+
+## Zero-shot Log-based Anomaly Detection with LLM
+
+> Properly analyzing logs in a large distributed environment is complicated. Modern log environments require a multi-step process to collect, parse, index, and ultimately analyze logs. This process requires human intervention throughout — a burden of labor and knowledge. Today tools like machine learning seek to solve this problem, but that introduces further reliance on the log processing step; ultimately making more work for engineers.
+> 
+> Implementing an large language model (LLM) to perform zero-shot anomaly detection (not requiring correct parsing, index, and known good states — all the trappings of existing systems). The objective in this research is to address the shortcomings of existing complex solutions that rely on time and knowledge, fail to handle log formatting changes, and have too strict of tolerances for known states. LLMs are a solution that is evolving significantly and can technically align with the requirements to find zero-shot anomalies in logs, while side-stepping the issues found in current solutions. There are studies that explore LLM-informed anomaly detection in adjacent fields, but for system and application logs this topic has not yet been sufficiently explored.
+> 
+> Finally, looking forward to the future, standard systems must be developed. This should affect both system design and analysis of log sequences themselves. By taking this step during the early phases of LLM integration, engineers and researchers can keep the apace with the advancements in LLM infrastructure as it becomes available and ultimately ensure that all logs are eventually audited.
+
+[Zero-shot Log-based Anomaly Detection with LLM](./Zero-shot%20Log-based%20Anomaly%20Detection%20with%20LLM.pdf)
+
+_See more in the [supporting repository](https://github.com/iamwpj/bigstick)_
