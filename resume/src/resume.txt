@@ -24,14 +24,14 @@ University of Northern Iowa
 
 Senior Systems Administrator - Cedar Falls - 2022 to Present
 
-As a senior, I work educate coworkers and establish long-term goals with
-my team, alongside previous responsibilities.
+As a senior, I work to educate coworkers and establish long-term goals
+with my team, alongside previous responsibilities.
 
 Systems and Network Administrator - Cedar Falls - 2016 to 2022
 
 I focus on automation to support a variety of servers and clusters. I
 interact with a broad range of technologies and resources to help
-provide reliable IT at UNI.
+provide reliable IT infrastructure services at UNI.
 
 Aces
 
@@ -69,9 +69,7 @@ Experience
   large scale projects that require accounting for a diverse set of
   goals. I have worked to ensure that these projects are successful both
   on launch, but maintainable and continue to be extend past their
-  initial availability. Examples of this: Transistion from Samanage to
-  Jira Service Desk & Implementation of Jira Projects (2019) and Zoom
-  Phone Evaluation (2020-2021).
+  initial availability.
 
 Acknowledgments and Continuing Education
 
@@ -80,7 +78,7 @@ Acknowledgments and Continuing Education
 - Throughput Computing; HPC Conference Madison, WI - 2023
 - Panther First award; Service Hub Implementation (Jira Service Desk) -
   2019
-- PCI Certified - 2018 to 2022
+- PCI Certified - 2018 to present
 - Avaya Aura Certification - 2018
 - HIPAA Certification - 2015 and 2016
 
@@ -93,7 +91,7 @@ Specific Skills
 - Web: Apache, MySQL, Redis, PHP/HTML/CSS/JS, WordPress
 - Authentication: integrating into login systems: LDAP, Active
   Directory, SAML
-- Systems: Linux, vSphere, Docker (testing only)
+- Systems: Linux, vSphere, Docker
 - Workflow: GitLab CI, Rundeck, Jira
 - Logging, Alerting, & Metrics: rsyslog, ELK (and OpenSearch, etc),
   Icinga, PagerDuty, Prometheus, Grafana
@@ -108,15 +106,12 @@ Special Projects
   service for several years as it gained support and traction for the
   value offered. In January 2022, I deployed OpenSearch as a near
   production centralized log cluster.
-- IT service management platform migration: I worked with a small team
-  to review and evaluate replacement options for our feature limited
-  service platform. We chose Jira Service Desk to integrate with another
-  product that was being implemented simultaneously — Jira Software. I
-  served on both teams and helped to ensure the products would be a good
-  fit and the decisions that were made helped to align with IT's goals
-  for customer service. I also handled the migration of data from our
-  previous ticket system to Jira Service Desk by creating custom API
-  tooling.
+- Network device monitoring automation: Create a system to automate,
+  import, and expand our service monitoring of network devices. The
+  automation was needed to replace a cumbersome manual process that was
+  not being completed effectively. I also expanded the service to enable
+  network engineers to develop custom monitors and use a CI workflow to
+  activate them.
 - Web learning application: I maintained a custom application that
   allows instructors to teach classes about WordPress, SEO, MySQL
   databases, and web development for two years before beginning a full

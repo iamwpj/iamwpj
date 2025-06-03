@@ -12,11 +12,16 @@ nav {
 button {
     float: right;
     color: #777;
-    font-size: 1.25vh;
+    font-size: 0.90em;
     font-family: monospace;
     margin: 5px;
 }
 
+/* font */
+/* @font-face {
+    font-family: "iA Writer Duo";
+    src: url("font/iAWriterDuoV.ttf");
+} */
 
 /* global */
 
@@ -46,15 +51,15 @@ hr {
 }
 
 #contact h1 {
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     text-align: center;
-    font-size: 2vh;
+    font-size: 1.10em;
 }
 
 #contact h2 {
-    font-family: sans-serif;
+    font-family: Helvetica, sans-serif;
     text-align: center;
-    font-size: 1.5vh;
+    font-size: 1.00em;
 }
 
 #contact hr {
@@ -67,34 +72,34 @@ hr {
 /* sections */
 
 #sections h1 {
-    font-family: sans-serif;
-    font-size: 1.75vh;
+    font-family: "Helvetica", sans-serif;
+    font-size: 1.20em;
 }
 
 #sections h2 {
-    font-size: 1.75vh;
-    margin-left: 7.5%;
+    font-size: 1.15em;
+    margin-left: 3%;
 }
 
 #sections h3 {
-    font-size: 1.5vh;
+    font-size: 1.10em;
     font-style: italic;
     font-weight: bolder;
-    margin-left: 7.5%;
+    margin-left: 3%;
     line-height: 60%;
 }
 
 #sections p {
-    font-family: serif;
-    font-size: 1.33vh;
-    margin-left: 10%;
-    margin-right: 15%;
+    font-family: "Times New Roman", serif;
+    font-size: 1.00em;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #sections ul {
-    font-size: 1.5vh;
-    margin-left: 5%;
-    margin-right: 15%;
+    font-size: 1.10em;
+    margin-left: 2%;
+    margin-right: 5%;
 }
 
 @media print {
