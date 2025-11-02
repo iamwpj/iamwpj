@@ -57,6 +57,10 @@
       const response = await fetch('https://api.github.com/repos/iamwpj/iamwpj/contents/recipes');
       const d = await response.json();
       const data = d.filter(x => x.name.includes('.pdf'));
+      const names = data
+        .map(x => x.name)
+        .sort();
+      
       let htmlString = '<ul>';
             
       for (let file of data) {
