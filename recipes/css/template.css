@@ -1,0 +1,96 @@
+nav {
+    color: #777;
+    font-size: 10px;
+    font-family: monospace;
+    text-align: right;
+    float: right;
+    line-height: 1;
+    width: 100%
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #2e2e2e;
+        color: seashell;
+    }
+    blockquote {
+        background-color: dimgray;
+        color: seashell;
+    }
+}
+
+body.dark-mode {
+    background-color: #2e2e2e;
+    color: seashell;
+}
+
+body.dark-mode blockquote {
+    background-color: black;
+    color: gray;
+}
+
+body {
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #444;
+    padding: 0 10px;
+    background-color: #f3f3f3;
+}
+
+body blockquote {
+    background: #DEDEDE;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+    color: black;
+    font-family: sans-serif;
+}
+
+a:link {
+    color: darkcyan
+}
+
+a:visited {
+    color: darkcyan;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2
+}
+
+img {
+    width: 100%;
+    object-fit: contain;
+}
+
+pre code {
+    font-size: smaller;
+    font-family: monospace;
+    color: seashell;
+    background-color: dimgray;
+    display: block;
+    padding: 20px;
+    -webkit-overflow-scrolling: touch;
+    white-space: pre-wrap;
+}
+
+#home-button {
+    float: right;
+    color: #777;
+    font-size: 16px;
+    font-family: monospace;
+    margin: 5px;
+}
+
+#dark-button {
+    float: right;
+    color: #777;
+    font-size: 16px;
+    font-family: monospace;
+    margin: 5px;
+}
