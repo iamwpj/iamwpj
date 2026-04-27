@@ -1,6 +1,6 @@
 # Recipes
 
-A simple LaTeX template and PDF output for writing readable recipes.
+A simple LaTeX template and PDF output for writing readable recipes. See webpage here: https://iamwpj.com/recipes/
 
 ## Dependencies
 
